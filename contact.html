@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PDF Master Hub</title>
+  <meta name="description" content="Contact PDF Master Hub for support, feature requests, or inquiries.">
+  <link rel="canonical" href="https://pdfmasterhub.com/contact.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><i class="fas fa-file-pdf"></i><span>PDF Master Hub</span></a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html" class="nav-link">Terms</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+        <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container hero-section">
+    <div style="max-width: 650px; margin: 0 auto; text-align: left;" class="seo-article">
+      <h1 style="text-align: center; margin-bottom: 0.5rem;">Contact Us</h1>
+      <p style="text-align: center; margin-bottom: 2rem;">Have a question, feedback, or feature request? We would love to hear from you!</p>
+
+      <form onsubmit="event.preventDefault(); showToast('Thank you! Your message has been sent.', 'success'); this.reset();">
+        <div class="control-group" style="margin-bottom: 1.25rem;">
+          <label>Your Name:</label>
+          <input type="text" class="form-control" required placeholder="John Doe">
+        </div>
+
+        <div class="control-group" style="margin-bottom: 1.25rem;">
+          <label>Email Address:</label>
+          <input type="email" class="form-control" required placeholder="name@example.com">
+        </div>
+
+        <div class="control-group" style="margin-bottom: 1.25rem;">
+          <label>Subject:</label>
+          <input type="text" class="form-control" required placeholder="Feature Request / Support">
+        </div>
+
+        <div class="control-group" style="margin-bottom: 1.5rem;">
+          <label>Message:</label>
+          <textarea class="form-control" rows="5" required placeholder="How can we help you?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 PDF Master Hub. All rights reserved.</p></div></div></footer>
+  <script src="assets/js/common.js"></script>
+</body>
+</html>

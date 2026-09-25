@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compress PDF Files Online Free - Reduce PDF Size (100% Private)</title>
+  <meta name="description" content="Compress PDF files and reduce file size online for free. 100% private client-side image re-sampling and PDF optimization with zero server file uploads.">
+  <meta name="keywords" content="compress PDF, shrink PDF size, reduce PDF MB, compress PDF 100kb, optimize PDF online, small PDF converter, PDF size reducer free">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://pdfmasterhub.com/compress-pdf.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfmasterhub.com/compress-pdf.html">
+  <meta property="og:title" content="Compress PDF Files Online Free - Reduce PDF Size">
+  <meta property="og:description" content="Shrink large PDF files for email attachments while preserving document quality locally in browser.">
+  <meta property="og:site_name" content="PDF Master Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compress PDF Files Online Free - Reduce PDF Size">
+  <meta name="twitter:description" content="Shrink large PDF files for email attachments while preserving document quality locally in browser.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDF Compressor - PDF Master Hub",
+      "url": "https://pdfmasterhub.com/compress-pdf.html",
+      "description": "Client-side tool to shrink PDF document file sizes for email sharing.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Compress PDF Files Online",
+      "description": "Reduce large PDF document file size in your browser.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload PDF File",
+          "text": "Select the heavy PDF file you wish to shrink."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Select Compression Preset",
+          "text": "Choose Recommended, Extreme, or High Quality compression mode."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Compress & Download",
+          "text": "Click Compress PDF Now to process and save your reduced PDF."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pdfmasterhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compress PDF",
+          "item": "https://pdfmasterhub.com/compress-pdf.html"
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><i class="fas fa-file-pdf"></i><span>PDF Master Hub</span></a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="compress-pdf.html" class="nav-link active">Compress</a></li>
+        <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+        <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="ads-container"><div class="ad-banner"><span class="ad-label">Advertisement</span><p>AdSense Banner Slot</p></div></div>
+
+    <section class="hero-section">
+      <div class="hero-badge"><i class="fas fa-file-contract"></i> PDF Compressor & Optimizer</div>
+      <h1 class="hero-title">Compress & Shrink <span>PDF Files</span></h1>
+      <p class="hero-subtitle">Reduce PDF file size for easy email attachment while maintaining visual document clarity.</p>
+    </section>
+
+    <div class="tool-workspace">
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-file-archive dropzone-icon"></i>
+          <h3 class="dropzone-title">Select PDF file to compress</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop file</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <span class="hero-badge" id="original-size-badge" style="font-size: 1rem;">Original Size: --</span>
+        </div>
+
+        <div style="max-width: 400px; margin: 0 auto 1.5rem;" class="control-group">
+          <label>Compression Level:</label>
+          <select class="form-control" id="compression-level">
+            <option value="medium" selected>Recommended Compression (Balanced Quality & Size)</option>
+            <option value="extreme">Extreme Compression (Maximum Shrinkage)</option>
+            <option value="less">Less Compression (High Quality)</option>
+          </select>
+        </div>
+
+        <div class="progress-container" id="progress-bar">
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="progress-text" id="progress-text">Compressing pages...</div>
+        </div>
+
+        <div class="tool-controls">
+          <div><span style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> Processed 100% locally in browser.</span></div>
+          <button class="btn btn-primary btn-lg" id="compress-pdf-btn"><i class="fas fa-compress-alt"></i> Compress PDF Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ads-container"><div class="ad-banner"><span class="ad-label">Advertisement</span><p>AdSense Banner Slot</p></div></div>
+
+    <article class="seo-article">
+      <h2>How to Compress PDF Files Online</h2>
+      <p>Shrink heavy PDF files that exceed email attachment limits without uploading confidential documents to public cloud servers.</p>
+    </article>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 PDF Master Hub. All rights reserved.</p></div></div></footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/compress-pdf.js"></script>
+</body>
+</html>

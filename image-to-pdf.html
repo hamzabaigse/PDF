@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert JPG & PNG Images to PDF Free Online - 100% Private (No Uploads)</title>
+  <meta name="description" content="Convert JPG, PNG, and WebP images into a standardized multi-page PDF document online for free. Customize page sizes (A4, Letter), margins, and orientation 100% in your browser.">
+  <meta name="keywords" content="image to PDF, JPG to PDF, PNG to PDF, convert photo to PDF, picture to PDF converter, JPG to PDF A4, photos to PDF free">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://pdfmasterhub.com/image-to-pdf.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfmasterhub.com/image-to-pdf.html">
+  <meta property="og:title" content="Convert JPG & PNG Images to PDF Free Online - Private">
+  <meta property="og:description" content="Transform photos, PNG graphics, and screenshots into a multi-page PDF document locally in your browser. Fast and free.">
+  <meta property="og:site_name" content="PDF Master Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convert JPG & PNG Images to PDF Free Online - Private">
+  <meta name="twitter:description" content="Transform photos, PNG graphics, and screenshots into a multi-page PDF document locally in your browser. Fast and free.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Images to PDF Converter - PDF Master Hub",
+      "url": "https://pdfmasterhub.com/image-to-pdf.html",
+      "description": "Convert JPG, PNG, and WebP images to multi-page PDF documents locally in browser.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Convert JPG and PNG Images to PDF Online",
+      "description": "Combine photos and image files into a single structured PDF document.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Select Images",
+          "text": "Upload one or multiple JPG, PNG, or WebP image files."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Adjust Layout Settings",
+          "text": "Choose page size (A4, Letter, Fit), page orientation, and margin spacing."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Convert & Download",
+          "text": "Click Convert Images to PDF to save your compiled document."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pdfmasterhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Image to PDF",
+          "item": "https://pdfmasterhub.com/image-to-pdf.html"
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>PDF Master Hub</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+        <li><a href="image-to-pdf.html" class="nav-link active">Images to PDF</a></li>
+        <li><a href="compress-pdf.html" class="nav-link">Compress</a></li>
+        <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <span class="ad-label">Advertisement</span>
+        <p>AdSense Responsive Banner Slot</p>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fas fa-file-image"></i> 100% Free Images to PDF Converter
+      </div>
+      <h1 class="hero-title">Convert JPG & PNG <span>to PDF Document</span></h1>
+      <p class="hero-subtitle">
+        Transform your photos, scanned document images, PNG graphics, and screenshots into a multi-page PDF document. Custom margins, page sizes, and reordering.
+      </p>
+    </section>
+
+    <!-- Workspace -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-images dropzone-icon"></i>
+          <h3 class="dropzone-title">Select images or drag & drop here</h3>
+          <p class="dropzone-subtitle">Supports JPG, PNG, and WebP image formats</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select Images</button>
+          <input type="file" id="file-input" accept="image/*" multiple style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          
+          <div class="control-group">
+            <label>Page Size:</label>
+            <select class="form-control" id="page-size">
+              <option value="A4" selected>A4 (Standard)</option>
+              <option value="Letter">US Letter</option>
+              <option value="fit">Fit Image Dimensions</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label>Orientation:</label>
+            <select class="form-control" id="orientation">
+              <option value="portrait" selected>Portrait</option>
+              <option value="landscape">Landscape</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label>Page Margin:</label>
+            <select class="form-control" id="margin">
+              <option value="none">No Margin</option>
+              <option value="small" selected>Small Margin</option>
+              <option value="large">Big Margin</option>
+            </select>
+          </div>
+
+          <button class="btn btn-danger btn-sm" id="clear-btn" style="margin-top: 1.25rem;"><i class="fas fa-trash"></i> Clear All</button>
+
+        </div>
+
+        <div class="file-list" id="image-grid"></div>
+
+        <div class="tool-controls">
+          <div>
+            <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> Photos processed 100% locally in browser.</span>
+          </div>
+          <button class="btn btn-primary btn-lg" id="convert-btn">
+            <i class="fas fa-file-pdf"></i> Convert Images to PDF
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <span class="ad-label">Advertisement</span>
+        <p>AdSense Banner Container</p>
+      </div>
+    </div>
+
+    <!-- SEO Article Section -->
+    <article class="seo-article">
+      <h2>How to Convert JPG and PNG Images to PDF Online</h2>
+      <p>
+        Whether you are submitting scanned passport images, receipts, handwritten notes, photo documentation, or design portfolios, combining image files into a single PDF document ensures standard presentation and easy sharing. PDF Master Hub offers an intuitive image-to-PDF converter that processes images instantly inside your web browser.
+      </p>
+
+      <h3>Steps to Convert Photos to PDF:</h3>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">Select Images</div>
+          <div class="step-desc">Upload one or multiple JPG, PNG, or WebP image files from your computer or phone.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">Adjust Settings</div>
+          <div class="step-desc">Configure page size (A4, Letter, Fit), orientation, margins, and drag to reorder photos.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">Convert & Save</div>
+          <div class="step-desc">Click "Convert Images to PDF" to generate and download your compiled PDF document.</div>
+        </div>
+      </div>
+
+      <h2>High Resolution & Complete Privacy</h2>
+      <p>
+        Unlike online converters that compress or downscale your images over cloud servers, PDF Master Hub maintains full native image resolution while performing all transformations locally. Your photos and personal document scans never leave your local device.
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 PDF Master Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/image-to-pdf.js"></script>
+</body>
+</html>

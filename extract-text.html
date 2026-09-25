@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extract Text from PDF Online Free - Convert PDF to TXT (100% Private)</title>
+  <meta name="description" content="Extract plain text contents from PDF documents online for free. Single click copy to clipboard and TXT file download with 100% private browser processing.">
+  <meta name="keywords" content="extract text PDF, PDF to TXT, copy text from PDF, convert PDF text, PDF word counter, read PDF text online free">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://pdfmasterhub.com/extract-text.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfmasterhub.com/extract-text.html">
+  <meta property="og:title" content="Extract Text from PDF Free Online - Copy PDF Content">
+  <meta property="og:description" content="Extract readable text from PDF files page-by-page. Copy directly to clipboard or export as TXT.">
+  <meta property="og:site_name" content="PDF Master Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Extract Text from PDF Free Online - Copy PDF Content">
+  <meta name="twitter:description" content="Extract readable text from PDF files page-by-page. Copy directly to clipboard or export as TXT.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDF Text Extractor - PDF Master Hub",
+      "url": "https://pdfmasterhub.com/extract-text.html",
+      "description": "Extract readable plain text content from PDF pages with single-click copying.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Extract Text from PDF Documents",
+      "description": "Extract plain text from PDF files directly in your web browser.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload PDF File",
+          "text": "Select your PDF document."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "View Extracted Text",
+          "text": "Inspect the parsed text output with word and character counts."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Copy or Download",
+          "text": "Click Copy to Clipboard or Download TXT file."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pdfmasterhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Extract Text",
+          "item": "https://pdfmasterhub.com/extract-text.html"
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><i class="fas fa-file-pdf"></i><span>PDF Master Hub</span></a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="extract-text.html" class="nav-link active">Extract Text</a></li>
+        <li><a href="compress-pdf.html" class="nav-link">Compress</a></li>
+        <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+        <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="ads-container"><div class="ad-banner"><span class="ad-label">Advertisement</span><p>AdSense Banner Slot</p></div></div>
+
+    <section class="hero-section">
+      <div class="hero-badge"><i class="fas fa-align-left"></i> PDF Text Extractor</div>
+      <h1 class="hero-title">Extract Text <span>from PDF</span></h1>
+      <p class="hero-subtitle">Extract readable plain text content page-by-page with live character and word counts.</p>
+    </section>
+
+    <div class="tool-workspace">
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-file-alt dropzone-icon"></i>
+          <h3 class="dropzone-title">Select PDF to extract text</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop file</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+          <span id="text-stats" style="font-weight: 700; color: var(--primary);">Pages: -- | Words: --</span>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-secondary btn-sm" id="copy-text-btn"><i class="fas fa-copy"></i> Copy to Clipboard</button>
+            <button class="btn btn-primary btn-sm" id="download-txt-btn"><i class="fas fa-download"></i> Download .TXT File</button>
+          </div>
+        </div>
+
+        <textarea id="extracted-text-area" class="form-control" style="width: 100%; height: 350px; font-family: monospace; line-height: 1.5;" readonly></textarea>
+      </div>
+    </div>
+
+    <div class="ads-container"><div class="ad-banner"><span class="ad-label">Advertisement</span><p>AdSense Banner Slot</p></div></div>
+
+    <article class="seo-article">
+      <h2>How to Extract Text from PDF Documents</h2>
+      <p>Quickly copy text snippets, citations, and full document contents into plain text format for easy editing.</p>
+    </article>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 PDF Master Hub. All rights reserved.</p></div></div></footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/extract-text.js"></script>
+</body>
+</html>

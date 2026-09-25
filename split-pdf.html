@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split PDF & Delete Pages Online Free - 100% Private (No Uploads)</title>
+  <meta name="description" content="Split PDF files, extract page ranges, or delete unwanted pages online for free. Visual interactive page picker with zero server file uploads and instant download.">
+  <meta name="keywords" content="split PDF, extract PDF pages, delete PDF pages, remove pages from PDF, separate PDF online, PDF page extractor, split PDF no upload">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://pdfmasterhub.com/split-pdf.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfmasterhub.com/split-pdf.html">
+  <meta property="og:title" content="Split PDF & Delete Pages Online Free - 100% Private">
+  <meta property="og:description" content="Extract specific page ranges or remove unwanted pages from PDF files client-side. Fast, free, and secure.">
+  <meta property="og:site_name" content="PDF Master Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Split PDF & Delete Pages Online Free - 100% Private">
+  <meta name="twitter:description" content="Extract specific page ranges or remove unwanted pages from PDF files client-side. Fast, free, and secure.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDF Splitter - PDF Master Hub",
+      "url": "https://pdfmasterhub.com/split-pdf.html",
+      "description": "Extract specific page ranges or delete unwanted pages from PDF files client-side.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Split a PDF or Delete Pages Online",
+      "description": "Extract page ranges or remove unwanted pages from PDF documents visually in your browser.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload Document",
+          "text": "Select your PDF file to render visual page thumbnails."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Select Pages",
+          "text": "Click thumbnails or type page ranges (e.g. 1-3, 5, 8-10) to choose target pages."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Extract or Delete",
+          "text": "Choose to extract selected pages or delete them and download your new PDF document."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pdfmasterhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Split PDF",
+          "item": "https://pdfmasterhub.com/split-pdf.html"
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>PDF Master Hub</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link active">Split</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+        <li><a href="image-to-pdf.html" class="nav-link">Images to PDF</a></li>
+        <li><a href="compress-pdf.html" class="nav-link">Compress</a></li>
+        <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <span class="ad-label">Advertisement</span>
+        <p>AdSense Responsive Banner Slot</p>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fas fa-scissors"></i> Visual PDF Splitter & Page Deleter
+      </div>
+      <h1 class="hero-title">Split & Extract <span>PDF Pages</span></h1>
+      <p class="hero-subtitle">
+        Select specific pages to extract into a new PDF or delete unwanted pages instantly. Visual page thumbnail grid with complete client-side privacy.
+      </p>
+    </section>
+
+    <!-- Workspace -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-cloud-upload-alt dropzone-icon"></i>
+          <h3 class="dropzone-title">Select a PDF file to split</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop your document</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="control-group">
+            <label>Mode:</label>
+            <select class="form-control" id="split-mode">
+              <option value="extract">Extract Selected Pages</option>
+              <option value="delete">Delete Selected Pages</option>
+            </select>
+          </div>
+
+          <div class="control-group" style="flex-grow: 1; max-width: 350px;">
+            <label>Page Range Selection (e.g. 1-3, 5, 8-10):</label>
+            <input type="text" class="form-control" id="page-range-input" placeholder="e.g. 1-3, 5, 7">
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; margin-top: 1.25rem;">
+            <button class="btn btn-secondary btn-sm" id="select-all-btn">Select All</button>
+            <button class="btn btn-secondary btn-sm" id="deselect-all-btn">Deselect All</button>
+          </div>
+        </div>
+
+        <div class="file-list" id="page-grid"></div>
+
+        <div class="tool-controls">
+          <div>
+            <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> Processed 100% locally in browser memory.</span>
+          </div>
+          <button class="btn btn-primary btn-lg" id="split-btn">
+            <i class="fas fa-scissors"></i> Process & Download PDF
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <span class="ad-label">Advertisement</span>
+        <p>AdSense Banner Container</p>
+      </div>
+    </div>
+
+    <!-- SEO Article Section -->
+    <article class="seo-article">
+      <h2>How to Split a PDF or Delete Pages Online</h2>
+      <p>
+        Working with multi-page PDF files often requires extracting specific chapters, isolating individual pages, or removing blank or confidential pages before sending documents out. PDF Master Hub provides a powerful visual PDF splitting tool that allows you to preview every single page thumbnail and select exact page numbers to extract or delete.
+      </p>
+
+      <h3>How to Use the PDF Splitter:</h3>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">Upload File</div>
+          <div class="step-desc">Select your PDF file to instantly generate interactive page thumbnails.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">Select Pages</div>
+          <div class="step-desc">Click thumbnails or type page ranges (e.g. 1-4, 7, 9) into the selection box.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">Download Split PDF</div>
+          <div class="step-desc">Choose whether to extract or delete the selected pages and download your new PDF.</div>
+        </div>
+      </div>
+
+      <h2>Complete Data Security Guarantee</h2>
+      <p>
+        Many online file splitters upload your PDF documents to remote cloud storage buckets where they can remain cached or exposed. PDF Master Hub operates with a strict <strong>zero-server-upload policy</strong>. All parsing, canvas page rendering, and PDF splitting occur entirely inside your browser memory via WebAssembly and JavaScript. Your files never cross the network.
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 PDF Master Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/split-pdf.js"></script>
+</body>
+</html>
