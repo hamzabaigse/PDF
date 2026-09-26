@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All-in-One PDF Editor & Form Filler - Add Text, Photos & Signatures (100% Private)</title>
+  <meta name="description" content="Edit PDF documents online for free. Fill out PDF forms, type custom text with font sizes 10px-72px, upload & adjust passport photos to fit form boxes, draw signatures, with full Undo/Redo & Eraser tools.">
+  <meta name="keywords" content="PDF editor online, fill PDF form, add photo to PDF, insert image in PDF, PDF form filler free, sign and edit PDF, edit PDF online free, undo redo PDF editor">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://freepdfonline.world/edit-pdf.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freepdfonline.world/edit-pdf.html">
+  <meta property="og:title" content="All-in-One PDF Editor & Form Filler - Add Text, Photos & Signatures">
+  <meta property="og:description" content="Fill PDF application forms, place resizable photos, type custom text with Undo/Redo & Eraser tools, and sign documents locally in your browser.">
+  <meta property="og:site_name" content="FreePDFOnline.world">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All-in-One PDF Editor & Form Filler - Add Text, Photos & Signatures">
+  <meta name="twitter:description" content="Fill PDF application forms, place resizable photos, type custom text with Undo/Redo & Eraser tools, and sign documents locally in your browser.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967995859234566" crossorigin="anonymous"></script>
+
+  <style>
+    /* Editor Element Overlay Styling */
+    .editor-item {
+      position: absolute;
+      border: 2px dashed var(--primary);
+      background: rgba(99, 102, 241, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 0.3rem 0.6rem;
+      cursor: move;
+      user-select: none;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: border-color 0.2s;
+    }
+
+    .editor-item:hover, .editor-item.active {
+      border-style: solid;
+      border-color: var(--secondary);
+      background: rgba(6, 182, 212, 0.12);
+    }
+
+    .editor-text {
+      font-family: sans-serif;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .editor-photo {
+      pointer-events: none;
+      display: block;
+    }
+
+    .editor-delete-btn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 22px;
+      height: 22px;
+      background: var(--danger);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      z-index: 12;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* Resizable corner handle for photos and signatures */
+    .resize-handle {
+      position: absolute;
+      right: -6px;
+      bottom: -6px;
+      width: 14px;
+      height: 14px;
+      background: var(--secondary);
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      cursor: nwse-resize;
+      z-index: 12;
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      width: 90%;
+      max-width: 550px;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "All-in-One PDF Editor & Form Filler - FreePDFOnline.world",
+      "url": "https://freepdfonline.world/edit-pdf.html",
+      "description": "Complete PDF Editor: fill form fields, place resizable passport photos, type text with expanded font sizes 10px-72px, and sign PDF documents locally in your browser with Undo/Redo tools.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Edit a PDF & Fill Application Forms Online",
+      "description": "Add text, place photos, fill form boxes, and sign PDF documents client-side.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload PDF Form",
+          "text": "Select your PDF document or form to edit."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Fill Custom Text & Upload Photo",
+          "text": "Type text tags, select font sizes (10px-72px), or upload a photo/picture and resize it to fit the form box."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Draw Signature",
+          "text": "Draw your signature and place it on the signature line."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Burn & Download",
+          "text": "Click Export Edited PDF to save your completed document."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freepdfonline.world/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PDF Editor",
+          "item": "https://freepdfonline.world/edit-pdf.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I add and resize my photo on a PDF application form for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Upload your passport photo or picture, drag it over the form box, and drag the corner handle to scale and resize it to fit the box perfectly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my edited PDF documents and passport photos kept private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100% private. FreePDFOnline.world processes all text fields, photo resizing, and signatures locally inside your browser using pdf-lib. No files or photos are uploaded to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I undo or redo actions while editing my PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Use the Undo (Ctrl+Z) and Redo (Ctrl+Y) buttons on the toolbar to undo or redo any text, photo, or signature placement."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>FreePDFOnline.world</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="edit-pdf.html" class="nav-link active">PDF Editor</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+        <li><a href="image-to-pdf.html" class="nav-link">Images to PDF</a></li>
+        <li><a href="compress-pdf.html" class="nav-link">Compress</a></li>
+        <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Top Ad Banner Placement -->
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development, Automation, or Freelance Services?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation, data processing & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com?subject=Custom%20IT%20Services%20Inquiry" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fas fa-edit"></i> All-in-One PDF Form Filler & Complete PDF Editor
+      </div>
+      <h1 class="hero-title">Edit PDF, Fill Forms & <span>Add Photos</span></h1>
+      <p class="hero-subtitle">
+        Type custom text tags with font sizes (10px–72px), upload & adjust passport photos to fit form boxes, draw signatures, with full Undo/Redo & Eraser tools!
+      </p>
+    </section>
+
+    <!-- Workspace Card -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-edit dropzone-icon"></i>
+          <h3 class="dropzone-title">Select a PDF form or document to edit</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop your document</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <!-- Page Navigation, Undo/Redo & Tool Controls Toolbar -->
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.25rem;">
+          
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <button class="btn btn-secondary btn-sm" id="prev-page-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+            <span id="page-indicator" style="font-weight: 700; font-size: 0.9rem;">Page 1 of 1</span>
+            <button class="btn btn-secondary btn-sm" id="next-page-btn">Next <i class="fas fa-chevron-right"></i></button>
+          </div>
+
+          <!-- Undo / Redo & Eraser Buttons -->
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" id="undo-btn" disabled title="Undo (Ctrl+Z)"><i class="fas fa-undo"></i> Undo</button>
+            <button class="btn btn-secondary btn-sm" id="redo-btn" disabled title="Redo (Ctrl+Y)"><i class="fas fa-redo"></i> Redo</button>
+            
+            <button class="btn btn-warning btn-sm" id="add-eraser-btn" title="Add Whiteout Eraser Block to hide/erase content"><i class="fas fa-eraser"></i> Whiteout Eraser</button>
+            <select class="form-control" id="eraser-size" style="padding: 0.35rem 0.5rem; font-size: 0.85rem;" title="Eraser Brush Size">
+              <option value="15">15px (Small)</option>
+              <option value="30" selected>30px (Medium)</option>
+              <option value="60">60px (Large)</option>
+              <option value="100">100px (Huge)</option>
+            </select>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" id="add-photo-btn"><i class="fas fa-image"></i> Add Photo / Picture</button>
+            <input type="file" id="photo-upload-input" accept="image/*" style="display: none;">
+
+            <button class="btn btn-secondary btn-sm" id="open-sig-modal-btn"><i class="fas fa-pen-nib"></i> Add Signature</button>
+            <button class="btn btn-secondary btn-sm" id="add-date-btn"><i class="fas fa-calendar-alt"></i> Insert Date</button>
+            <button class="btn btn-danger btn-sm" id="clear-elements-btn" title="Remove All Tags"><i class="fas fa-trash"></i> Clear Page</button>
+          </div>
+
+        </div>
+
+        <!-- Custom Text Field, Font Family & Expanded Font Size Controls -->
+        <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+          
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+            <input type="text" class="form-control" id="custom-text-input" placeholder="Type text to place on PDF (Name, Email, Address, Phone, Comments)..." style="flex-grow: 1;">
+            
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.3rem;">
+              <label style="margin: 0; font-size: 0.85rem; font-weight: 700;">Font:</label>
+              <select class="form-control" id="font-family" style="padding: 0.35rem 0.6rem;">
+                <option value="Helvetica" selected>Helvetica (Sans)</option>
+                <option value="TimesRoman">Times New Roman (Serif)</option>
+                <option value="Courier">Courier (Monospace)</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+              </select>
+            </div>
+
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.3rem;">
+              <label style="margin: 0; font-size: 0.85rem; font-weight: 700;">Size:</label>
+              <select class="form-control" id="font-size" style="padding: 0.35rem 0.6rem;">
+                <option value="10">10px (Tiny)</option>
+                <option value="12">12px (Small)</option>
+                <option value="14">14px</option>
+                <option value="16">16px</option>
+                <option value="18" selected>18px (Medium)</option>
+                <option value="20">20px</option>
+                <option value="24">24px (Large)</option>
+                <option value="28">28px</option>
+                <option value="32">32px (Huge)</option>
+                <option value="40">40px</option>
+                <option value="48">48px (Title)</option>
+                <option value="60">60px</option>
+                <option value="72">72px (Giant)</option>
+              </select>
+            </div>
+
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.3rem;">
+              <label style="margin: 0; font-size: 0.85rem; font-weight: 700;">Color:</label>
+              <input type="color" id="font-color" value="#000000" style="border: none; background: none; cursor: pointer; width: 32px; height: 32px;">
+            </div>
+
+            <button class="btn btn-primary btn-sm" id="add-custom-text-btn"><i class="fas fa-plus"></i> Add Text Tag</button>
+          </div>
+
+        </div>
+
+        <!-- Interactive Canvas Wrapper with Draggable/Resizable Overlay Layer -->
+        <div style="text-align: center; overflow-x: auto; background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <div class="canvas-wrapper" id="canvas-wrapper" style="position: relative; display: inline-block;">
+            <canvas id="pdf-canvas" style="display: block;"></canvas>
+            <div id="editor-elements-container" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;"></div>
+          </div>
+        </div>
+
+        <!-- Actions Panel -->
+        <div class="tool-controls">
+          <div>
+            <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> Drag & scale tags to form boxes. Burned 100% locally in browser.</span>
+          </div>
+          <button class="btn btn-primary btn-lg" id="download-edited-pdf-btn">
+            <i class="fas fa-download"></i> Export & Download Edited PDF
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Middle Ad Banner Placement -->
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development, Automation, or Freelance Services?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation, data processing & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com?subject=Custom%20IT%20Services%20Inquiry" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- SEO Article Section (800+ Words for AdSense Compliance) -->
+    <article class="seo-article">
+      <h2>How to Edit PDF Files & Fill Application Forms Online</h2>
+      <p>
+        Completing PDF application forms, job applications, passport forms, leases, or official contracts online often requires inserting text fields (such as your full name, email address, physical address, and phone number), attaching a passport-style photo to a designated box, and signing at the bottom.
+      </p>
+      <p>
+        FreePDFOnline.world's **All-in-One PDF Editor** combines form filling, photo resizing, expanded font sizing (10px–72px), text placing, Undo/Redo history, and electronic signing into a single intuitive browser canvas interface. You can drag and scale any photo or text tag to fit the exact bounding boxes on any document form.
+      </p>
+
+      <h3>Step-by-Step Guide to Edit Your PDF:</h3>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">Upload PDF Form</div>
+          <div class="step-desc">Open your PDF file and navigate to the target page you wish to fill.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">Fill Custom Text</div>
+          <div class="step-desc">Type your text, select font sizes (10px to 72px), and drag text tags onto form lines.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">Upload & Resize Photo</div>
+          <div class="step-desc">Upload your passport photo or picture, drag it to the photo box, and drag the corner handle to resize it.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-title">Sign & Export</div>
+          <div class="step-desc">Draw your signature, place it on the signature line, use Undo/Redo if needed, and click "Export & Download Edited PDF".</div>
+        </div>
+      </div>
+
+      <h2>Complete Data Security & Zero-Server Storage</h2>
+      <p>
+        Personal identity application forms, passport photos, and signature images are highly sensitive. Uploading these files to external web servers introduces severe privacy risks. FreePDFOnline.world executes all image scaling, text vector embedding, and PDF compilation 100% locally in your web browser memory using <code>pdf-lib</code> and WebAssembly. Your photos and personal document data never cross the internet.
+      </p>
+    </article>
+
+  </main>
+
+  <!-- Signature Creator Modal -->
+  <div class="modal-overlay" id="editor-sig-modal">
+    <div class="modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.25rem; font-weight: 700;"><i class="fas fa-pen-nib" style="color: var(--primary);"></i> Draw Your Signature</h3>
+        <button id="close-sig-modal-btn" style="background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer;"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div style="background: #ffffff; border-radius: var(--radius-sm); padding: 0.5rem; margin-bottom: 1rem; border: 1px solid var(--border-color);">
+        <canvas id="editor-sig-pad" width="480" height="180" style="display: block; cursor: crosshair; touch-action: none; background: #fff; width: 100%; height: 180px;"></canvas>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <label style="font-size: 0.85rem; font-weight: 700;">Ink Color:</label>
+          <input type="color" id="sig-pen-color" value="#000000" style="border: none; background: none; cursor: pointer; width: 28px; height: 28px;">
+          <button class="btn btn-secondary btn-sm" id="clear-sig-pad-btn"><i class="fas fa-eraser"></i> Clear Pad</button>
+        </div>
+
+        <button class="btn btn-primary btn-sm" id="apply-sig-btn"><i class="fas fa-check"></i> Add Signature to PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreePDFOnline.world. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/pdf-editor.js"></script>
+</body>
+</html>

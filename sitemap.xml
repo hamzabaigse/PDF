@@ -7,6 +7,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://freepdfonline.world/edit-pdf.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.98</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://freepdfonline.world/merge-pdf.html</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.95</priority>
