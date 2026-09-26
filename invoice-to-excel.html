@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Invoice to Excel Converter - Extract PDF Invoices to CSV (100% Private)</title>
+  <meta name="description" content="Upload multiple PDF invoices or receipts and extract Invoice Number, Date, Vendor, Tax, and Total Amount into a clean Excel (.xlsx) or CSV file. 100% client-side in browser processing with zero server uploads.">
+  <meta name="keywords" content="PDF invoice to Excel, batch invoice parser free, extract receipt data to CSV, PDF invoice to CSV online, invoice data extraction free, QuickBooks PDF invoice export, private PDF invoice extractor">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://freepdfonline.world/invoice-to-excel.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freepdfonline.world/invoice-to-excel.html">
+  <meta property="og:title" content="Bulk Invoice to Excel Converter - Private PDF Invoice Data Extractor">
+  <meta property="og:description" content="Convert multiple PDF invoices & receipts into clean Excel (.xlsx) or CSV spreadsheets locally in your browser. Zero cloud uploads.">
+  <meta property="og:site_name" content="FreePDFOnline.world">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bulk Invoice to Excel Converter - Private PDF Invoice Data Extractor">
+  <meta name="twitter:description" content="Convert multiple PDF invoices & receipts into clean Excel (.xlsx) or CSV spreadsheets locally in your browser. Zero cloud uploads.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967995859234566" crossorigin="anonymous"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bulk Invoice to Excel Converter - FreePDFOnline.world",
+      "url": "https://freepdfonline.world/invoice-to-excel.html",
+      "description": "Extract Invoice Numbers, Dates, Vendors, Tax Amounts, and Totals from multiple PDF invoices directly into Excel (.xlsx) or CSV format locally inside your browser.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Extract Bulk PDF Invoices into Excel or CSV",
+      "description": "Convert multiple PDF invoices or receipts into a structured spreadsheet without server uploads.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload PDF Invoices",
+          "text": "Select one or multiple PDF invoice files or receipts."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Automatic Text Parsing",
+          "text": "The in-browser engine extracts Invoice #, Date, Vendor Name, Tax, and Total Amount."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review & Edit Data",
+          "text": "Review extracted data in the interactive preview table and make manual edits if required."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Export to Excel",
+          "text": "Click Export to Excel (.xlsx) or Export to CSV to download your compiled financial data."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freepdfonline.world/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Invoice to Excel",
+          "item": "https://freepdfonline.world/invoice-to-excel.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are my company invoices and financial data kept private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100% private. FreePDFOnline.world processes all text parsing and Excel generation locally inside your web browser using WebAssembly and JavaScript. No financial data or PDF documents are ever uploaded to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export PDF invoice data directly to QuickBooks or Xero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The exported CSV or Excel (.xlsx) file is structured with standard column headers (Vendor, Invoice #, Date, Tax, Total) that can be imported directly into QuickBooks, Xero, Sage, or Microsoft Excel."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>FreePDFOnline.world</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="edit-pdf.html" class="nav-link">PDF Editor</a></li>
+        <li><a href="invoice-to-excel.html" class="nav-link active">Invoice to Excel</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+        <li><a href="image-to-pdf.html" class="nav-link">Images to PDF</a></li>
+        <li><a href="compress-pdf.html" class="nav-link">Compress</a></li>
+        <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Top Ad Banner Placement -->
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development, Automation, or Freelance Services?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation, data processing & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com?subject=Custom%20IT%20Services%20Inquiry" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fas fa-file-invoice-dollar"></i> Bulk Invoice & Receipt Data Extractor
+      </div>
+      <h1 class="hero-title">Batch PDF Invoices to <span>Excel & CSV</span></h1>
+      <p class="hero-subtitle">
+        Drop 10 or 100 PDF invoices → automatically extract Invoice #, Date, Vendor Name, Tax, and Total Amount into a clean Excel (.xlsx) file. 100% private in-browser processing!
+      </p>
+    </section>
+
+    <!-- Workspace Card -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-file-excel dropzone-icon" style="color: var(--accent);"></i>
+          <h3 class="dropzone-title">Select or drag PDF invoices / receipts here</h3>
+          <p class="dropzone-subtitle">Batch process multiple PDF files at once (100% Client-Side Privacy)</p>
+          <button class="btn btn-primary"><i class="fas fa-folder-open"></i> Select PDF Invoices</button>
+          <input type="file" id="file-input" accept=".pdf" multiple style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <!-- Summary Stats & Controls Header -->
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+          
+          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+            <div>
+              <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Parsed Invoices:</span>
+              <strong id="summary-count" style="font-size: 1.3rem; color: var(--text-main);">0</strong>
+            </div>
+            <div>
+              <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Total Amount:</span>
+              <strong id="summary-total" style="font-size: 1.3rem; color: var(--accent);">$0.00</strong>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" id="add-manual-row-btn"><i class="fas fa-plus"></i> Add Row</button>
+            <button class="btn btn-primary btn-sm" id="export-xlsx-btn" style="background: #107c41; border-color: #107c41;"><i class="fas fa-file-excel"></i> Export to Excel (.xlsx)</button>
+            <button class="btn btn-secondary btn-sm" id="export-csv-btn"><i class="fas fa-file-csv"></i> Export CSV</button>
+          </div>
+
+        </div>
+
+        <!-- Interactive Editable Table -->
+        <div style="overflow-x: auto; background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+          <table style="width: 100%; border-collapse: collapse; min-width: 750px;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); text-align: left; font-size: 0.85rem; color: var(--text-muted);">
+                <th style="padding: 0.75rem 0.5rem; width: 22%;">Filename</th>
+                <th style="padding: 0.75rem 0.5rem; width: 22%;">Vendor / Supplier</th>
+                <th style="padding: 0.75rem 0.5rem; width: 15%;">Invoice #</th>
+                <th style="padding: 0.75rem 0.5rem; width: 14%;">Invoice Date</th>
+                <th style="padding: 0.75rem 0.5rem; width: 12%;">Tax Amount</th>
+                <th style="padding: 0.75rem 0.5rem; width: 12%;">Total Amount</th>
+                <th style="padding: 0.75rem 0.5rem; text-align: center; width: 3%;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="invoice-table-body">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+
+        <div style="text-align: center;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-shield-alt" style="color: var(--accent);"></i> All text parsing & Excel generation occurs 100% in your browser. Zero server uploads.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Custom Enterprise Automation Freelance Banner -->
+    <div class="promo-card">
+      <div class="promo-content">
+        <h3><i class="fas fa-robot" style="color: var(--primary);"></i> Need Custom ERP, Invoice & Accounting Automation?</h3>
+        <p>
+          I build custom Python/JS automation bots to extract structured data from PDF invoices, bills, and purchase orders directly into QuickBooks, Xero, SAP, MySQL, or Google Sheets.
+        </p>
+        <div class="promo-tags">
+          <span class="promo-tag">PDF Invoice Parser</span>
+          <span class="promo-tag">QuickBooks Auto-Sync</span>
+          <span class="promo-tag">Python & JS Scripts</span>
+          <span class="promo-tag">Data Extraction APIs</span>
+        </div>
+      </div>
+      <div>
+        <a href="mailto:hamzabaigse@gmail.com?subject=Custom%20Invoice%20Automation%20Inquiry" class="btn btn-primary btn-lg" style="white-space: nowrap;"><i class="fas fa-paper-plane"></i> Contact Me: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Middle Ad Banner Placement -->
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development, Automation, or Freelance Services?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation, data processing & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com?subject=Custom%20IT%20Services%20Inquiry" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- SEO Article Section (800+ Words for AdSense & Business Keywords) -->
+    <article class="seo-article">
+      <h2>How to Batch Extract PDF Invoices to Excel & CSV Online</h2>
+      <p>
+        Small businesses, accountants, bookkeepers, and corporate finance teams handle dozens or hundreds of vendor PDF invoices and expense receipts every month. Manually reading each invoice document and typing invoice numbers, dates, vendor details, tax figures, and line item amounts into Microsoft Excel or accounting software like **QuickBooks, Xero, or Sage** is tedious and error-prone.
+      </p>
+      <p>
+        FreePDFOnline.world's **Bulk Invoice to Excel Converter** automates this workflow directly inside your web browser. You can select or drag 10, 50, or 100 PDF invoice files at once, automatically extract financial fields, review them in an interactive table, and export a clean `.xlsx` spreadsheet or `.csv` file in seconds.
+      </p>
+
+      <h3>Step-by-Step Guide to Parse PDF Invoices:</h3>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">Upload Invoices</div>
+          <div class="step-desc">Select or drag one or multiple PDF invoices or receipt documents into the dropzone.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">Automated Extraction</div>
+          <div class="step-desc">Our in-browser parser identifies Invoice Numbers, Dates, Vendor Names, Tax Amounts, and Totals.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">Review & Edit</div>
+          <div class="step-desc">Inspect the extracted fields in the live table and make manual edits or adjustments if needed.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-title">Export to Excel / CSV</div>
+          <div class="step-desc">Click "Export to Excel (.xlsx)" or "Export CSV" to instantly download your financial summary sheet.</div>
+        </div>
+      </div>
+
+      <h2>Complete Financial Data Privacy & Security</h2>
+      <p>
+        Company invoices, tax identifiers, vendor payment information, and transaction totals represent highly confidential corporate financial data. Uploading bulk invoice PDFs to cloud-based OCR APIs or third-party web servers introduces significant data security risks. FreePDFOnline.world processes all text parsing, pattern detection, and Excel workbook compilation **100% client-side inside your browser memory**. Your financial documents never touch any remote server or external database.
+      </p>
+
+      <h2>Seamless Integration with QuickBooks, Xero & Excel</h2>
+      <p>
+        The exported `.xlsx` and `.csv` files are structured with standardized column headings (*Filename, Vendor/Supplier, Invoice Number, Invoice Date, Tax Amount, Total Amount, Currency*). You can import the resulting CSV file directly into accounting packages like **QuickBooks Online**, **Xero**, **Zoho Books**, **FreshBooks**, or open it in **Microsoft Excel** and **Google Sheets**.
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreePDFOnline.world. All rights reserved. 100% Client-Side Local Browser Processing.</p>
+        <p>Built for Speed & Privacy</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/invoice-to-excel.js"></script>
+</body>
+</html>
