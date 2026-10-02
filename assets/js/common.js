@@ -13,7 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileNav();
   initFaqAccordion();
+  initAutoLangRedirect();
 });
+
+/* Automatic Browser Language Detection for First-Time Visitors */
+function initAutoLangRedirect() {
+  const path = window.location.pathname;
+  if (path === '/' || path === '/index.html') {
+    const hasBeenRedirected = sessionStorage.getItem('lang_redirected');
+    if (!hasBeenRedirected) {
+      const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      let targetFolder = '';
+      if (userLang.startsWith('de')) targetFolder = 'de/';
+      else if (userLang.startsWith('fr')) targetFolder = 'fr/';
+      else if (userLang.startsWith('es')) targetFolder = 'es/';
+      else if (userLang.startsWith('ar')) targetFolder = 'ar/';
+
+      if (targetFolder) {
+        sessionStorage.setItem('lang_redirected', 'true');
+        window.location.href = targetFolder + 'index.html';
+      }
+    }
+  }
+}
 
 /* Theme Toggle Manager */
 function initTheme() {

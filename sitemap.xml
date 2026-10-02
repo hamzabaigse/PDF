@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://freepdfonline.world/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/de/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.98</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/fr/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.98</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/es/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.98</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/ar/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.98</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
