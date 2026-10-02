@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initAutoLangRedirect();
 });
 
+/* Global Language Switcher Dropdown Handler */
+window.toggleLangMenu = function(e) {
+  if (e) e.stopPropagation();
+  const m = document.getElementById('lang-menu');
+  if (m) m.style.display = m.style.display === 'block' ? 'none' : 'block';
+};
+
+document.addEventListener('click', () => {
+  const m = document.getElementById('lang-menu');
+  if (m) m.style.display = 'none';
+});
+
 /* Automatic Browser Language Detection for First-Time Visitors */
 function initAutoLangRedirect() {
   const path = window.location.pathname;

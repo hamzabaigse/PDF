@@ -104,6 +104,19 @@
         <li><a href="organize-pdf.html" class="nav-link">Organize</a></li>
       </ul>
       <div class="nav-actions">
+        <!-- Language Switcher Dropdown -->
+        <div class="lang-dropdown" style="position: relative; display: inline-block;">
+          <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.85rem;" onclick="toggleLangMenu(event)">
+            ?? EN <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:3px;"></i>
+          </button>
+          <div id="lang-menu" style="display: none; position: absolute; right: 0; top: 100%; margin-top: 5px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); box-shadow: var(--shadow-md); z-index: 9999; min-width: 125px;">
+            <a href="index.html" style="display: block; padding: 0.5rem 0.8rem; font-size: 0.85rem; color: var(--primary); font-weight:700;">???? English</a>
+            <a href="de/index.html" style="display: block; padding: 0.5rem 0.8rem; font-size: 0.85rem; color: var(--text-main);">???? Deutsch</a>
+            <a href="fr/index.html" style="display: block; padding: 0.5rem 0.8rem; font-size: 0.85rem; color: var(--text-main);">???? Français</a>
+            <a href="es/index.html" style="display: block; padding: 0.5rem 0.8rem; font-size: 0.85rem; color: var(--text-main);">???? Español</a>
+            <a href="ar/index.html" style="display: block; padding: 0.5rem 0.8rem; font-size: 0.85rem; color: var(--text-main);">???? ???????</a>
+          </div>
+        </div>
         <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
         <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
       </div>
@@ -155,5 +168,6 @@
   <script src="assets/js/extract-text.js"></script>
 </body>
 </html>
+
 
 
