@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redact PDF Online Free - Blackout Sensitive PDF Information (100% Private)</title>
+  <meta name="description" content="Blackout or whiteout sensitive legal text, social security numbers, and private figures on PDF files. Permanently redact PDF documents locally in your web browser.">
+  <meta name="keywords" content="redact PDF online, blackout text in PDF, hide sensitive data PDF, sanitize PDF document free, PDF redaction tool browser">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://freepdfonline.world/redact-pdf.html">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967995859234566" crossorigin="anonymous"></script>
+
+  <style>
+    .editor-item {
+      position: absolute;
+      border-radius: 4px;
+      cursor: move;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .editor-delete-btn {
+      position: absolute;
+      top: -8px; right: -8px;
+      width: 20px; height: 20px;
+      background: var(--danger);
+      color: #fff; border: none;
+      border-radius: 50%; cursor: pointer;
+      font-size: 0.65rem; z-index: 12;
+    }
+    .resize-handle {
+      position: absolute;
+      right: -5px; bottom: -5px;
+      width: 12px; height: 12px;
+      background: var(--secondary);
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      cursor: nwse-resize;
+      z-index: 12;
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Redact PDF - FreePDFOnline.world",
+      "url": "https://freepdfonline.world/redact-pdf.html",
+      "description": "Permanently redact sensitive text, graphics, and figures from PDF files with blackout or whiteout boxes.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>FreePDFOnline.world</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="edit-pdf.html" class="nav-link">PDF Editor</a></li>
+        <li><a href="redact-pdf.html" class="nav-link active">Redact PDF</a></li>
+        <li><a href="invoice-to-excel.html" class="nav-link">Invoice to Excel</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+        <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development or Automation?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fas fa-user-shield"></i> Permanent PDF Redaction Tool
+      </div>
+      <h1 class="hero-title">Redact & Blackout <span>PDF Information</span></h1>
+      <p class="hero-subtitle">
+        Permanently remove sensitive text, social security numbers, and private graphics from PDF files. 100% private in-browser processing!
+      </p>
+    </section>
+
+    <!-- Workspace Card -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-user-shield dropzone-icon" style="color: var(--danger);"></i>
+          <h3 class="dropzone-title">Select or drag PDF file to redact</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop your document</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+          
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <button class="btn btn-secondary btn-sm" id="prev-page-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+            <span id="page-indicator" style="font-weight: 700; font-size: 0.9rem;">Page 1 of 1</span>
+            <button class="btn btn-secondary btn-sm" id="next-page-btn">Next <i class="fas fa-chevron-right"></i></button>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <label style="font-size:0.85rem; font-weight:700;">Color:</label>
+            <select class="form-control" id="redact-color" style="padding:0.35rem 0.6rem;">
+              <option value="#000000" selected>Blackout (Black)</option>
+              <option value="#ffffff">Whiteout (White)</option>
+            </select>
+
+            <button class="btn btn-warning btn-sm" id="add-redact-box-btn"><i class="fas fa-plus"></i> Add Redaction Box</button>
+            <button class="btn btn-primary btn-sm" id="apply-redact-btn"><i class="fas fa-download"></i> Burn Redactions & Save PDF</button>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; overflow-x: auto; background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <div class="canvas-wrapper" id="canvas-wrapper" style="position: relative; display: inline-block;">
+            <canvas id="pdf-canvas" style="display: block;"></canvas>
+            <div id="redact-boxes-container" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SEO Article -->
+    <article class="seo-article">
+      <h2>How to Redact PDF Documents Online Privately</h2>
+      <p>
+        Legal contracts, financial statements, medical records, and government applications often contain sensitive personal data. FreePDFOnline.world burns solid blackout rectangles directly into the vector layer of your PDF, permanently removing underlying information.
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreePDFOnline.world. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/redact-pdf.js"></script>
+</body>
+</html>

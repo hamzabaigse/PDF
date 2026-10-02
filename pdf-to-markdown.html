@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF to Markdown Converter Online Free - Extract PDF to .md (100% Private)</title>
+  <meta name="description" content="Convert PDF documents into clean Markdown (.md) files online for free. Perfect for notes, docs, ChatGPT AI prompts, and LLMs. 100% client-side browser processing.">
+  <meta name="keywords" content="PDF to Markdown converter free, convert PDF to md online, extract PDF for LLMs ChatGPT, PDF text to Markdown browser">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://freepdfonline.world/pdf-to-markdown.html">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967995859234566" crossorigin="anonymous"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDF to Markdown Converter - FreePDFOnline.world",
+      "url": "https://freepdfonline.world/pdf-to-markdown.html",
+      "description": "Convert PDF files into formatted Markdown (.md) text for AI prompts, documentation, and note-taking.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>FreePDFOnline.world</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="edit-pdf.html" class="nav-link">PDF Editor</a></li>
+        <li><a href="pdf-to-markdown.html" class="nav-link active">PDF to Markdown</a></li>
+        <li><a href="invoice-to-excel.html" class="nav-link">Invoice to Excel</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+        <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development or Automation?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fab fa-markdown"></i> PDF to Markdown Converter for LLMs & AI
+      </div>
+      <h1 class="hero-title">Convert PDF to <span>Markdown (.md)</span></h1>
+      <p class="hero-subtitle">
+        Turn PDF documents into structured Markdown files for ChatGPT, Notion, Obsidian, and documentation. 100% private in-browser processing!
+      </p>
+    </section>
+
+    <!-- Workspace Card -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fab fa-markdown dropzone-icon" style="color: var(--primary);"></i>
+          <h3 class="dropzone-title">Select or drag PDF file to convert to Markdown</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop your document</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700;"><i class="fab fa-markdown" style="color: var(--primary);"></i> Extracted Markdown Content</h3>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-secondary btn-sm" id="copy-md-btn"><i class="fas fa-copy"></i> Copy Markdown</button>
+            <button class="btn btn-primary btn-sm" id="download-md-btn"><i class="fas fa-download"></i> Download .md File</button>
+          </div>
+        </div>
+
+        <textarea id="markdown-preview" style="width: 100%; height: 350px; background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem; font-family: monospace; font-size: 0.9rem; line-height: 1.5; resize: vertical;"></textarea>
+
+      </div>
+
+    </div>
+
+    <!-- SEO Article -->
+    <article class="seo-article">
+      <h2>How to Convert PDF to Markdown Online</h2>
+      <p>
+        Markdown (.md) is the preferred text format for AI large language models (LLMs), Obsidian notes, Notion databases, and developer documentation. FreePDFOnline.world extracts structural headings, paragraphs, and list items from PDF files directly into Markdown format.
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreePDFOnline.world. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/pdf-to-markdown.js"></script>
+</body>
+</html>

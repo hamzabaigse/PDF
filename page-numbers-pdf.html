@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Page Numbers to PDF Online Free - Page Numbering Tool (100% Private)</title>
+  <meta name="description" content="Add page numbers to your PDF documents online for free. Choose positions (Bottom-Center, Top-Right), formats (Page 1 of N), font sizes, and colors. 100% client-side in browser processing.">
+  <meta name="keywords" content="add page numbers to PDF, PDF page numbering online, page number generator PDF, number PDF pages free, private PDF page numberer">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://freepdfonline.world/page-numbers-pdf.html">
+
+  <link rel="alternate" hreflang="x-default" href="https://freepdfonline.world/page-numbers-pdf.html">
+  <link rel="alternate" hreflang="en" href="https://freepdfonline.world/page-numbers-pdf.html">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967995859234566" crossorigin="anonymous"></script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Add Page Numbers to PDF - FreePDFOnline.world",
+      "url": "https://freepdfonline.world/page-numbers-pdf.html",
+      "description": "Insert customized page numbers into PDF documents with configurable position, typography, and format.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-file-pdf"></i>
+        <span>FreePDFOnline.world</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="edit-pdf.html" class="nav-link">PDF Editor</a></li>
+        <li><a href="invoice-to-excel.html" class="nav-link">Invoice to Excel</a></li>
+        <li><a href="merge-pdf.html" class="nav-link">Merge</a></li>
+        <li><a href="split-pdf.html" class="nav-link">Split</a></li>
+        <li><a href="page-numbers-pdf.html" class="nav-link active">Page Numbers</a></li>
+        <li><a href="sign-pdf.html" class="nav-link">Sign & Edit</a></li>
+        <li><a href="image-to-pdf.html" class="nav-link">Images to PDF</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+        <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <div class="ads-container">
+      <div class="ad-banner">
+        <h4 style="font-weight:700; margin-bottom:0.2rem; color:var(--text-main);"><i class="fas fa-laptop-code" style="color:var(--primary);"></i> Need Custom Web Development or Automation?</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">Web apps, Python/JS automation & IT solutions.</p>
+        <a href="mailto:hamzabaigse@gmail.com" class="btn btn-sm btn-secondary" style="font-size:0.8rem;"><i class="fas fa-envelope"></i> Contact: hamzabaigse@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <i class="fas fa-list-ol"></i> PDF Page Number Generator
+      </div>
+      <h1 class="hero-title">Add Page Numbers to <span>PDF Documents</span></h1>
+      <p class="hero-subtitle">
+        Insert page numbers into your PDF files in seconds. Select positions, format ("Page X of Y"), font size, and color. 100% private in-browser processing!
+      </p>
+    </section>
+
+    <!-- Workspace Card -->
+    <div class="tool-workspace">
+      
+      <div id="dropzone-container">
+        <div class="dropzone" id="dropzone">
+          <i class="fas fa-list-ol dropzone-icon" style="color: var(--primary);"></i>
+          <h3 class="dropzone-title">Select or drag PDF file to number</h3>
+          <p class="dropzone-subtitle">Click to browse or drag and drop your document</p>
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Select PDF File</button>
+          <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </div>
+      </div>
+
+      <div id="workspace-controls" style="display: none;">
+        
+        <div style="background: var(--bg-main); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.4rem;">
+              <label style="font-size: 0.85rem; font-weight: 700;">Position:</label>
+              <select class="form-control" id="num-position" style="padding: 0.4rem 0.6rem;">
+                <option value="bottom-center" selected>Bottom Center</option>
+                <option value="bottom-right">Bottom Right</option>
+                <option value="bottom-left">Bottom Left</option>
+                <option value="top-center">Top Center</option>
+                <option value="top-right">Top Right</option>
+                <option value="top-left">Top Left</option>
+              </select>
+            </div>
+
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.4rem;">
+              <label style="font-size: 0.85rem; font-weight: 700;">Format:</label>
+              <select class="form-control" id="num-format" style="padding: 0.4rem 0.6rem;">
+                <option value="page-x-of-y" selected>Page X of Y</option>
+                <option value="x">X (Number Only)</option>
+                <option value="dash-x">- X -</option>
+              </select>
+            </div>
+
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.4rem;">
+              <label style="font-size: 0.85rem; font-weight: 700;">Size:</label>
+              <select class="form-control" id="num-size" style="padding: 0.4rem 0.6rem;">
+                <option value="10">10px</option>
+                <option value="12" selected>12px</option>
+                <option value="14">14px</option>
+                <option value="16">16px</option>
+                <option value="20">20px</option>
+              </select>
+            </div>
+
+            <div class="control-group" style="flex-direction: row; align-items: center; gap: 0.4rem;">
+              <label style="font-size: 0.85rem; font-weight: 700;">Color:</label>
+              <input type="color" id="num-color" value="#000000" style="border: none; background: none; cursor: pointer; width: 32px; height: 32px;">
+            </div>
+
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-primary btn-lg" id="add-numbers-btn">
+            <i class="fas fa-download"></i> Apply Page Numbers & Download PDF
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SEO Article -->
+    <article class="seo-article">
+      <h2>How to Add Page Numbers to PDF Files Online</h2>
+      <p>
+        Organizing academic research papers, corporate reports, legal briefs, and ebooks requires page numbering for easy citation and navigation. FreePDFOnline.world lets you insert customizable page numbers into your PDF documents in seconds without server uploads.
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreePDFOnline.world. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/page-numbers-pdf.js"></script>
+</body>
+</html>

@@ -227,19 +227,21 @@ button, input, select, textarea {
   cursor: pointer;
 }
 
-/* AdSense Container Slots */
+/* AdSense Container Slots - Space Reservation Prevents Cumulative Layout Shift (CLS) */
 .ads-container {
   width: 100%;
-  margin: 2rem 0;
+  min-height: 110px;
+  margin: 1.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  contain: layout style;
 }
 
 .ad-banner {
   width: 100%;
   max-width: 728px;
-  min-height: 90px;
+  min-height: 100px;
   background: var(--bg-card);
   border: 1px dashed var(--border-color);
   border-radius: var(--radius-md);
@@ -250,6 +252,12 @@ button, input, select, textarea {
   padding: 0.75rem;
   color: var(--text-dim);
   font-size: 0.85rem;
+  overflow: hidden;
+}
+
+#dropzone-container {
+  min-height: 240px;
+  contain: layout style;
 }
 
 .ad-banner .ad-label {
