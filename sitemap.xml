@@ -162,4 +162,35 @@
     <priority>0.50</priority>
     <changefreq>monthly</changefreq>
   </url>
+
+  <url>
+    <loc>https://freepdfonline.world/blog.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/blog/convert-pdf-invoice-to-excel-guide.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/blog/client-side-pdf-security-guide.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/blog/ultimate-pdf-merging-editing-guide.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/blog/how-to-redact-pdf-safely.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
