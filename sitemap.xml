@@ -2,184 +2,171 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://freepdfonline.world/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/de/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.98</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://freepdfonline.world/fr/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.98</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/es/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.98</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/de/</loc>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.98</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/ar/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.98</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/edit-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.98</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/invoice-to-excel.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.98</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/page-numbers-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://freepdfonline.world/watermark-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/redact-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://freepdfonline.world/unlock-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/crop-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.95</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/pdf-to-markdown.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.95</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/merge-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://freepdfonline.world/terms-of-service.html</loc>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/split-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/sign-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.95</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/image-to-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.95</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/compress-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/rotate-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/pdf-to-image.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/watermark-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
+    <loc>https://freepdfonline.world/redact-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/protect-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/unlock-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/organize-pdf.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/extract-text.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.90</priority>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/privacy-policy.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/terms-of-service.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://freepdfonline.world/pdf-to-markdown.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://freepdfonline.world/about.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://freepdfonline.world/pdf-to-image.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/page-numbers-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/organize-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/merge-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/invoice-to-excel.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/image-to-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/extract-text.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/edit-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/crop-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/contact.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
   </url>
-
+  <url>
+    <loc>https://freepdfonline.world/compress-pdf.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/about.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
   <url>
     <loc>https://freepdfonline.world/blog.html</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.90</priority>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/blog/convert-pdf-invoice-to-excel-guide.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <priority>0.85</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freepdfonline.world/blog/client-side-pdf-security-guide.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <priority>0.85</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://freepdfonline.world/blog/ultimate-pdf-merging-editing-guide.html</loc>
@@ -189,6 +176,18 @@
   </url>
   <url>
     <loc>https://freepdfonline.world/blog/how-to-redact-pdf-safely.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/blog/convert-pdf-invoice-to-excel-guide.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://freepdfonline.world/blog/client-side-pdf-security-guide.html</loc>
     <lastmod>2026-10-05</lastmod>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
